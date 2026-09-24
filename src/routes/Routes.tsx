@@ -118,7 +118,6 @@ const Offline = lazy(() => import('@/app/(others)/offline'));
 const BackendModule = lazy(() => import('@/app/(admin)/(pages)/backend-modules'));
 const SecondaryListPage = lazy(() => import('@/components/SecondaryListPage'));
 const OperationsPage = lazy(() => import('@/components/OperationsPage'));
-const MetricSummaryPage = lazy(() => import('@/components/MetricSummaryPage'));
 const UserRolesPage = lazy(() => import('@/components/UserRolesPage'));
 const TicketBoardPage = lazy(() => import('@/components/TicketBoardPage'));
 const ServiceCalendarPage = lazy(() => import('@/components/ServiceCalendarPage'));

@@ -3,6 +3,14 @@ import React, { useEffect } from 'react';
 import LayoutProvider from '@/context/useLayoutContext';
 import { useLocation } from 'react-router';
 
+declare global {
+  interface Window {
+    HSStaticMethods?: {
+      autoInit: () => void;
+    };
+  }
+}
+
 const ProvidersWrapper = ({ children }: { children: React.ReactNode }) => {
   const path = useLocation();
 
@@ -27,7 +35,11 @@ const ProvidersWrapper = ({ children }: { children: React.ReactNode }) => {
       }
     });
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
     return () => observer.disconnect();
   }, []);
 
